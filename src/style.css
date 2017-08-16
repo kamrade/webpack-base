@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./font/HussarBoldWeb.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hello {
+  color: DarkSlateGray;
+  font-family: 'MyFont';
+  background: url('./img/freepik.jpg');
+  text-transform: uppercase;
+}
