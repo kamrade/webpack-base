@@ -16,9 +16,10 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    // new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      title: 'Output Management',
+      template: './src/index.html'
     })
   ],
 
@@ -37,6 +38,16 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.(scss|sass)$/,
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader'
+        }, {
+          loader: 'sass-loader'
+        }]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
