@@ -1,25 +1,28 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: './src/index.js',
-    print: './src/print.js'
+    print: './src/print.js',
+    app: './src/index.js'
   },
 
   devtool: 'inline-source-map',
 
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   },
 
   plugins: [
-    // new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: 'src/index.pug'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
 
   output: {
@@ -38,10 +41,7 @@ module.exports = {
         }
       },{
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: ['style-loader', 'css-loader']
       },{
         test: /\.(scss|sass)$/,
         use: [
