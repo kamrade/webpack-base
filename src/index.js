@@ -17,7 +17,7 @@ function component() {
   return element;
 }
 
-let element = component(); // Store the elementto re-render on print.js changes
+var element = component(); // Store the elementto re-render on print.js changes
 document.body.appendChild(element);
 
 if (module.hot) {

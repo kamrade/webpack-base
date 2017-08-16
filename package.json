@@ -9,9 +9,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server",
-    "server": "node server.js"
+    "build:dev": "webpack --env=dev",
+    "start": "webpack-dev-server --env=dev",
+    "server": "node server.js",
+    "build": "webpack --env=prod --progress --profile --colors"
   },
   "author": "Denis Mikhailov",
   "license": "ISC",
