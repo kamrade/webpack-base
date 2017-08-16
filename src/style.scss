@@ -1,6 +1,14 @@
-$main-color: DarkSlateGray;
+$main-color: red;
+
+body {
+  font-family: sans-serif;
+}
 
 .hello {
   color: $main-color;
-  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1rem;
+  button {
+    margin-top: 1rem;
+  }
 }
