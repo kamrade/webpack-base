@@ -8,4 +8,11 @@ Denis Mikhailov
 - webpack-dev-server, HMR, live-reload support
 - custom server (without live-reload) support
 
+*** v.1.0.1
+- Babel Loader
+- Rearrange webpack config for build and development
+
+
 *** Todo:
+- Hot module replacement now works only with styles as I can see
+- test

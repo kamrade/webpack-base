@@ -9,7 +9,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "webpack --env=dev",
     "start": "webpack-dev-server --env=dev",
     "server": "node server.js",
     "build": "webpack --env=prod --progress --profile --colors"
@@ -17,6 +16,9 @@
   "author": "Denis Mikhailov",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.4",
     "csv-loader": "^2.1.1",

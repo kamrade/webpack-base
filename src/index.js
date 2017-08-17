@@ -1,4 +1,4 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 import printMe from './print.js';
 import './style.scss';
 
@@ -6,7 +6,7 @@ function component() {
   var element = document.createElement('div');
   var btn = document.createElement('button');
 
-  element.innerHTML = _.join(['Hello', 'webpack', '<br>'], ' ');
+  element.innerHTML = 'Hello, webpack <br>';
   element.classList.add('hello');
 
   btn.innerHTML = 'Click me and check the console!';
@@ -22,7 +22,9 @@ document.body.appendChild(element);
 
 if (module.hot) {
   module.hot.accept('./print.js', function() {
+    console.log('yo');
     console.log('Accepting the updated printMe module!');
+    
     document.body.removeChild(element);
     element = component(); // Re-render the "component" to update the click handler
     document.body.appendChild(element);
