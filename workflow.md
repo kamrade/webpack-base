@@ -12,7 +12,11 @@ Denis Mikhailov
 - Babel Loader
 - Rearrange webpack config for build and development
 
+- 
+
 
 *** Todo:
 - Hot module replacement now works only with styles as I can see
+- Sourcemaps. Unexpectable behavior
 - test
+- Jade templates doesn't live reloading
