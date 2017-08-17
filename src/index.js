@@ -1,7 +1,7 @@
 // import _ from 'lodash';
 import printMe from './print.js';
 import './style.scss';
-import template from './templates/header.pug'
+import template from './view/header.pug'
 
 function component() {
   var element = document.createElement('div');

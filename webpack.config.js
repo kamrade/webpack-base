@@ -137,6 +137,7 @@ module.exports = function(env) {
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
+  console.log(config.devtool);
   return config;
 
 }

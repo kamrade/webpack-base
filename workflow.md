@@ -23,3 +23,4 @@ Denis Mikhailov
 - Hot module replacement now works only with styles as I can see
 - Jade templates live reloading now, but not HMR
 - В dev-mode папка dist удаляется даже если отключить плагин CleanWebpackPlugin
+- При разработке на dev-server, source-maps не отрабатывают
