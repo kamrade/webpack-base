@@ -8,15 +8,18 @@ Denis Mikhailov
 - webpack-dev-server, HMR, live-reload support
 - custom server (without live-reload) support
 
-*** v.1.0.1
 - Babel Loader
 - Rearrange webpack config for build and development
 
+- Jade/pug templates live-reloading
+- Make different build modes. One for prod, other for development
 - 
 
 
 *** Todo:
+- 
+
+*** Issues:
 - Hot module replacement now works only with styles as I can see
-- Sourcemaps. Unexpectable behavior
-- test
-- Jade templates doesn't live reloading
+- Jade templates live reloading now, but not HMR
+- В dev-mode папка dist удаляется даже если отключить плагин CleanWebpackPlugin

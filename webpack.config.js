@@ -118,6 +118,11 @@ module.exports = function(env) {
     );
   }
 
+  if(env === 'devbuild') {
+    console.log('--- BUILD FOR DEVELOPMENT MODE ---');
+    config.devtool = 'source-map';
+  }
+
   // DEVELOPMENT ONLY
   if(env === 'dev') {
     
@@ -128,7 +133,7 @@ module.exports = function(env) {
       hot: true,
       inline: true
     };
-    // config.plugins.push(new CleanWebpackPlugin(['dist']));
+    config.plugins.push(new CleanWebpackPlugin(['dist']));
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
