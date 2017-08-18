@@ -3,6 +3,7 @@ import printMe from './print.js';
 import './style.scss';
 import template from './view/header.pug'
 import $ from 'jquery';
+import d3 from 'd3';
 
 var appContainer = document.createElement('div');
 appContainer.innerHTML = template();
