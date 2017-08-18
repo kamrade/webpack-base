@@ -16,9 +16,20 @@ module.exports = function(env) {
       app: path.join(src, 'index.js'),
     },
 
+    resolve: {
+      alias: {
+        jquery: 'jquery/dist/jquery.min.js'
+      }
+    },
+
     devtool: env === 'dev' ? 'source-map' : false,
 
     plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jquery: 'jquery',
+        jQuery: 'jquery'
+      }),
       new HtmlWebpackPlugin({
         template: path.join(src, 'index.pug'),
         chunksSortMode: 'dependency',
